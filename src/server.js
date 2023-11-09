@@ -9,7 +9,19 @@ const app = express(); // Cria o servidor
 app.use(express.json()); // Permite que o servidor leia JSON
 
 app.get("/", (req, res) => { // Rota principal
-    res.status(200).json("Hello World!");
+    res.status(200).json("Hello GET!");
+});
+
+app.post("/", (req, res) => { // Rota principal
+    res.status(200).json("Hello POST!");
+});
+
+app.put("/", (req, res) => { // Rota principal
+    res.status(200).json("Hello PUT!");
+});
+
+app.delete("/", (req, res) => { // Rota principal
+    res.status(200).json("Hello DELETE!");
 });
 
 app.listen(port, () => { // Inicia o servidor
